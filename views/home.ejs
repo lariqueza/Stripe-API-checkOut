@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Home</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="app.css">  
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">          
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+        <style>
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color:#eef8ff;
+    font-family: 'poppins', sans-serif;
+}
+ 
+h1 {
+    position: relative;
+    margin-left: 45%;
+}
+ 
+a{
+    text-decoration:none;
+}
+ 
+.box{
+    width: 300px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px;
+}
+ 
+.slide-img{
+    height: 250px;
+    position: relative;
+}
+ 
+.slide-img img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+ 
+.detail-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+ 
+.type{
+    display: flex;
+    flex-direction: column;
+}
+ 
+.type a{
+    color:#222222;
+    margin: 5px 0px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+}
+ 
+.type span{
+    color:rgba(26,26,26,0.5);
+}
+ 
+.price{
+    color: #333333;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: poppins;
+    letter-spacing: 0.5px;
+}
+ 
+.overlay{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width:100%;
+    height: 100%;
+    background-color: rgba(92,95,236,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.buy-btn{
+    width:160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    color:#252525;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: calibri;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+}
+ 
+.buy-btn:hover{
+    color:#FFFFFF;
+    background-color: #f15fa3;
+    transition: all ease 0.3s;
+}
+ 
+.overlay{
+    visibility: hidden;
+}
+ 
+.slide-img:hover .overlay{
+    visibility: visible;
+    animation:fade 0.5s;
+}
+ 
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+ 
+.slider{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+ 
+ li {
+    list-style: none;
+    display: inline-block;
+}
+ 
+.button {
+    background: #fff;
+    padding: 10px 15px;
+    color: #071645;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+    margin-top: 25px;
+    margin-left: 45%;
+    margin-bottom: 50%; 
+    text-decoration: none;
+    transition: 0.4s;
+}
+ 
+.submit {
+    background: #fff;
+    padding: 10px 15px;
+    color: #071645;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+    margin-top: 25px;
+    margin-bottom: 50%; 
+    text-decoration: none;
+    transition: 0.4s;
+}
+ 
+.submit:hover {
+    background: #fcac2f;
+    color: #fff;
+}
+ 
+.button:hover {
+    background: #fcac2f;
+    color: #fff;
+}
+ 
+.popup {
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ 
+.popup-content {
+    height: 250px;
+    width: 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+ 
+input {
+    margin: 20px auto;
+    display: block;
+    width: 50%;
+    padding: 8px;
+    border: 1px solid gray;
+}
+ 
+.close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #fff;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+        </style>
+    </head>
+    <body>
+        <h1>Pantufla</h1>
+        <section class="slider">
+        <ul id="autoWidth" class="cs-hidden">
+            <li class="item-a">
+                <div class="box">
+                    <div class="slide-img">
+                        <img src="https://images.unsplash.com/photo-1607545734937-a0d45e8d3fa1?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+                        <div class="overlay">
+                            <a href="#" class="buy-btn">Buy now</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#"></a>
+                            <span>CrossStrap</span>
+                        </div>
+                        <a href="#" class="price" id="currency1" onclick="CurrencySwap()">$20</a>
+                    </div>
+                </div>
+            </li>
+ 
+            <li class="item-b">
+            <div class="box">
+                <div class="slide-img">
+                    <img src="https://images.unsplash.com/photo-1615314937547-ffeadb8fa82c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+                    <div class="overlay">
+                        <a href="#" class="buy-btn">Buy now</a>
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <div class="type">
+                        <a href="#"></a>
+                        <span>Sliders</span>
+                    </div>
+                    <a href="#" class="price" id="currency2" onclick="CurrencySwap()">$20</a>
+                </div>
+            </div>
+            </li>
+ 
+            <li class="item-c">
+                <div class="box">
+                    <div class="slide-img">
+                        <img src="https://images.unsplash.com/photo-1615314947249-95ebb09153e4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+                        <div class="overlay">
+                            <a href="#" class="buy-btn">Buy now</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#"></a>
+                            <span>Classics</span>
+                        </div>
+                        <a href="#" class="price" id="currency3" onclick="CurrencySwap()">$20</a>
+                    </div>
+                </div>
+                </li>
+        </ul>
+        </section>
+ 
+        <div class="container">
+            <a href="#" class="button" id="button">Contact Us</a>
+        </div>
+ 
+        <div class="popup">
+            <div class="popup-content">
+                <img src="https://image.shutterstock.com/image-vector/grunge-letter-x-cross-sign-600w-1696758415.jpg" alt="close" class="close">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Enquiry">
+                <a href="#" class="submit">Submit</a>
+ 
+            </div>
+        </div>
+        <Script>
+            
+ 
+document.getElementById("button").addEventListener("click", function() {
+    document.querySelector(".popup").style.display = "flex";
+})
+ 
+document.querySelector(".close").addEventListener("click", function() {
+    document.querySelector(".popup").style.display = "none";
+})
+ 
+function CurrencySwap() {
+    var price1 = document.getElementById("currency1");
+    if(price1.innerHTML === "$20") {
+        price1.innerHTML = "NGN 10000";
+    } else {
+        price1.innerHTML = "$20";
+    }
+ 
+    var price2 = document.getElementById("currency2");
+    if(price2.innerHTML === "$20") {
+        price2.innerHTML = "NGN 10000";
+    } else {
+        price2.innerHTML = "$20";
+    }
+ 
+    var price3 = document.getElementById("currency3");
+    if(price3.innerHTML === "$20") {
+        price3.innerHTML = "NGN 10000";
+    } else {
+        price3.innerHTML = "$20";
+    }
+}
+CurrencySwap();
+</Script>
+</body>
+</html>

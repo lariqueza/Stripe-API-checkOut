@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Home</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="product.css">  
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <srcipt src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></srcipt>          
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+        <style>
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 50%;
+}
+
+.box-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    background: #ccc;
+}
+
+.box-container .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 90rem;
+    padding: 1rem;
+    margin: 2rem;
+    box-shadow: 0 .3rem .5rem #3337;
+}
+
+.box-container .box .image-container .big-image {
+    box-shadow: 0 .3rem .5rem #3337;
+    border: .5rem solid #fff;
+    padding: 2rem 1rem;
+    background: #eee;
+}
+
+.box-container .box .image-container .big-image img {
+    height: 30rem;
+}
+
+.box-container .box .image-container .small-image {
+    padding: 1rem 0;
+}
+
+.box-container .box .image-container .small-image img {
+    box-shadow: 0 .3rem .5rem #3337;
+    border: 5rem solid #fff;
+    padding: 1rem;
+    background: #eee;
+    margin: 1rem;
+    height: 8rem;
+    cursor: pointer;
+}
+
+.box-container .box .image-container .small-image img.active,
+.box-container .box .image-container .small-image img:hover {
+    background: #ccc;
+}
+
+.box-container .box .content {
+    padding: 1rem;
+}
+
+.box-container .box .content .title {
+    font-size: 3rem;
+    color: #333;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+.box-container .box .content .price {
+    color: #333;
+    border-top: .2rem solid #333;
+    border-bottom: .2rem solid #333;
+    font-size: 3rem;
+    padding: .5rem;
+    display: inline-block;
+}
+
+.box-container .box .content p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+#total-price {
+    text-align: center;
+    font-size: 30px;
+}
+
+.box-container .box .content form .dropDown span {
+    font-size: 2rem;
+    display: block;
+    color: #333;
+    padding: 1rem 0;
+}
+
+.box-container .box .content form .dropDown select {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.box-container .box .content form .quantity {
+    padding: .2rem 0;
+}
+
+.box-container .box .content form .quantity span {
+    font-size: 2rem;
+    color: #333;
+}
+
+.box-container .box .content form .quantity input {
+    height: 3rem;
+    width: 6rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #666;
+    margin: 0.1rem;
+}
+
+.box-container .box .content .btn {
+    height: 4rem;
+    width: 18rem;
+    background: #333;
+    color: #fff;
+    margin-right: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.box-container .box .content .btn:hover {
+    background: #666;
+}
+
+.box-container .box .content .stock {
+    color: #666;
+    font-size: 2rem;
+}
+
+.box-container .box .content .stock i {
+    color: green;
+}
+
+.box-container .box .content .share {
+    padding: 2rem 0;
+}
+
+.box-container .box .content .share a {
+    color: #333;
+    border: .1rem solid #666;
+    padding: .8rem 2rem;
+    margin: .5rem 0;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    display: inline-block;
+}
+
+.box-container .box .content .share a:hover {
+    color: #fff;
+    background: #666;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+    .box-container .box {
+        flex-flow: column;
+    }
+}
+
+@media(max-width: 400px) {
+    html {
+        font-size: 50%;
+    }
+    .box-container .box .image-container .big-image img {
+        height: auto;
+        width: 100%;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <div class="box-container">
+            <div class="box">
+                <div class="image-container">
+                    <div class="big-image">
+                        <img src="https://images.unsplash.com/photo-1615314937547-ffeadb8fa82c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
+                    </div>
+                    <div class="small-image">
+                        <img class="active" src="https://images.unsplash.com/photo-1626707095539-71e621e6c5c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80">
+                        <img src="https://images.unsplash.com/photo-1626707192578-3536b1a3ce5d?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60">
+                        <img src="https://images.unsplash.com/photo-1626707148127-496d96f645a8?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60">
+                    </div>
+                </div>
+                <div class="content">
+                    <h3 class="title">sliders</h3>
+                    <div class="price" id="product-price"></div>
+                    <form action="">
+
+                        <div class="dropDown">
+                            <span> size(UK): </span>
+                            <select name="" id="">
+                                <option value="12">12</option>
+                                <option value="11">11</option>
+                                <option value="10">10</option>
+                                <option value="8">8</option>
+                            </select>
+                        </div>
+
+                        <div class="quantity" id="quan1">
+                            <input type="number" id="arrow-up" class="arrow-down" value="1">
+                        </div>
+                    </form>
+                    <a href="#"><button class="btn"><i class="fas fa-shopping-basket"></i></button></a>
+                    <span class="stock"><i class="fas fa-check"></i></span>
+                    <div class="share">
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            function increasePrice() {
+                const inputBtn = document.getElementById('arrow-up').nodeValue;
+                inputBtn.addEventListener('click', function() {
+                    const productPrice = document.getElementById('product-price').nodeValue;
+                    const subTotal = productPrice * inputBtn;
+                    console.log(subTotal);
+                });
+
+            }
+            increasePrice();
+
+        </script>
+    </body>
+</html>
